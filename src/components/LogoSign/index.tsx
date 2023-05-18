@@ -99,7 +99,7 @@ function Logo() {
 
   return (
     <TooltipWrapper
-      title="Tokyo Free White React Typescript Admin Dashboard"
+      title="Ceiber App Dashboard Administrador"
       arrow
     >
       <LogoWrapper to="/overview">

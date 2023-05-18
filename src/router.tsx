@@ -28,6 +28,7 @@ const Crypto = Loader(lazy(() => import('src/content/dashboards/Crypto')));
 const Messenger = Loader(
   lazy(() => import('src/content/applications/Messenger'))
 );
+const Customer = Loader(lazy(() => import('src/content/applications/Customer')));
 const Transactions = Loader(
   lazy(() => import('src/content/applications/Transactions'))
 );
@@ -84,10 +85,10 @@ const routes: RouteObject[] = [
     children: [
       {
         path: '/',
-        element: <Navigate to="crypto" replace />
+        element: <Navigate to="admin" replace />
       },
       {
-        path: 'crypto',
+        path: 'admin',
         element: <Crypto />
       },
       {
@@ -127,15 +128,15 @@ const routes: RouteObject[] = [
     children: [
       {
         path: '',
-        element: <Navigate to="crypto" replace />
+        element: <Navigate to="admin" replace />
       },
       {
-        path: 'crypto',
+        path: 'admin',
         element: <Crypto />
       },
       {
-        path: 'messenger',
-        element: <Crypto />
+        path: 'customer',
+        element: <Customer />
       }
     ]
   },

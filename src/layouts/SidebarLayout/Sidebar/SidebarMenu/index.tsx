@@ -212,7 +212,7 @@ function SidebarMenu() {
                   disableRipple
                   component={RouterLink}
                   onClick={closeSidebar}
-                  to="/dashboards/crypto"
+                  to="/dashboards/admin"
                   startIcon={<BrightnessLowTwoToneIcon />}
                 >
                   Inicio
@@ -223,7 +223,7 @@ function SidebarMenu() {
                   disableRipple
                   component={RouterLink}
                   onClick={closeSidebar}
-                  to="/dashboards/messenger"
+                  to="/dashboards/Customer"
                   startIcon={<MmsTwoToneIcon />}
                 >
                   Clientes
