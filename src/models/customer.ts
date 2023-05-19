@@ -8,6 +8,6 @@ export interface Customer{
     numeroDocumento: string;
     correo: string;
     celular: string;
-    ApellidosNombres: string;
-    
+    apellidosNombres: string;
+    fechaProceso: Date;
 }
