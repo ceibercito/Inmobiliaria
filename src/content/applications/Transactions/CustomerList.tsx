@@ -2,9 +2,19 @@ import { Card } from "@mui/material";
 import {Customer} from "src/models/customer";
 import RecentCustomerTable from './RecentCustomerTable';
 import { subDays } from "date-fns";
+import React from "react";
+import { customer } from "src/api/customer";
+
 
 function CustomerList(){
-    const customer: Customer[] = [
+    React.useEffect(()=>{
+        customer.getAll().then((r)=>{
+            console.log(r.data.results);
+        }).catch((e)=>{
+            console.error(e);
+        })
+    }, [])    
+    const customers: Customer[] = [
         {
             idCliente: '15694C0D-67D0-4E71-86E6-C3770C203939',
             idEmpresa: 'F03EFD10-2ABD-4B88-96B7-3B56783C2980',
@@ -95,7 +105,7 @@ function CustomerList(){
 
     return (
         <Card>
-            <RecentCustomerTable customer={customer} />
+            <RecentCustomerTable customer={customers} />
         </Card>
     );
 }
